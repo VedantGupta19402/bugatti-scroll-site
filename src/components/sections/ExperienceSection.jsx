@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollReveal from '../ScrollReveal';
 
-const ExperienceSection = () => {
+const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
   return (
     <section
       className="relative overflow-hidden z-20 flex flex-col items-center justify-center text-center"
@@ -91,6 +91,7 @@ const ExperienceSection = () => {
                 letterSpacing: '0.4em',
                 cursor: 'pointer',
               }}
+              onClick={onConfigureClick}
               onMouseEnter={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0f0f0f'; }}
               onMouseLeave={e => { e.currentTarget.style.background = '#0f0f0f'; e.currentTarget.style.color = '#f8f5f0'; }}
             >
@@ -108,6 +109,7 @@ const ExperienceSection = () => {
                 letterSpacing: '0.4em',
                 cursor: 'pointer',
               }}
+              onClick={onExploreModelsClick}
               onMouseEnter={e => { e.currentTarget.style.borderColor = '#B8962E'; e.currentTarget.style.color = '#B8962E'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; e.currentTarget.style.color = '#0f0f0f'; }}
             >
