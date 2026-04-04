@@ -14,7 +14,6 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
         minHeight: '85vh',
       }}
     >
-      {/* Giant ghost watermark */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
         aria-hidden
@@ -48,7 +47,6 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
 
       <div className="relative z-10 max-w-3xl mx-auto">
         <ScrollReveal direction="up">
-          {/* Eyebrow */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginBottom: '1.5rem' }}>
             <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to right, transparent, #B8962E)' }} />
             <span className="font-sub font-semibold uppercase" style={{ fontSize: '9px', letterSpacing: '0.55em', color: '#B8962E' }}>
@@ -57,7 +55,7 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
             <div style={{ width: '40px', height: '1px', background: 'linear-gradient(to left, transparent, #B8962E)' }} />
           </div>
 
-          {/* Main heading */}
+          
           <h2
             className="font-display font-black uppercase leading-none mb-8"
             style={{
@@ -78,7 +76,6 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
             uncompromising excellence and an experience that transcends mere transportation.
           </p>
 
-          {/* CTA row */}
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button
               className="font-sub font-semibold uppercase transition-all duration-300"
@@ -119,7 +116,6 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
         </ScrollReveal>
       </div>
 
-      {/* Bottom gold accent */}
       <div
         className="absolute bottom-0 left-1/2 pointer-events-none"
         style={{ transform: 'translateX(-50%)', width: '1px', height: '80px', background: 'linear-gradient(to top, transparent, #B8962E)' }}

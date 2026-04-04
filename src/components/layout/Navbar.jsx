@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const navItems = [
+  { label: 'Models', section: 'scrollSequence', href: '#scroll-sequence' },
+  { label: 'Brand', section: 'features', href: '#features' },
+  { label: 'Ownership', section: 'experience', href: '#experience' },
+];
+
+const Navbar = ({ onLogoClick, onNavigate, onConfigureClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -8,6 +14,13 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogoKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      onLogoClick?.();
+    }
+  };
 
   return (
     <nav
@@ -26,6 +39,10 @@ const Navbar = () => {
       <div
         className="font-display text-xl tracking-[0.2em] font-bold uppercase cursor-pointer select-none"
         style={{ color: '#0f0f0f' }}
+        role="button"
+        tabIndex={0}
+        onClick={onLogoClick}
+        onKeyDown={handleLogoKeyDown}
       >
         Bugatti
       </div>
@@ -35,14 +52,18 @@ const Navbar = () => {
         className="hidden md:flex gap-8 font-sub text-xs tracking-widest uppercase font-semibold"
         style={{ color: '#3a3a3a' }}
       >
-        {['Models', 'Brand', 'Ownership'].map((item) => (
+        {navItems.map((item) => (
           <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+            key={item.label}
+            href={item.href}
             className="relative group transition-colors duration-200"
             style={{ color: '#3a3a3a', textDecoration: 'none' }}
+            onClick={(event) => {
+              event.preventDefault();
+              onNavigate?.(item.section);
+            }}
           >
-            {item}
+            {item.label}
             <span
               className="absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300"
               style={{ background: '#B8962E' }}
@@ -58,6 +79,7 @@ const Navbar = () => {
           color: '#0f0f0f',
           border: '1px solid rgba(0,0,0,0.25)',
         }}
+        onClick={onConfigureClick}
         onMouseEnter={e => {
           e.currentTarget.style.background = '#0f0f0f';
           e.currentTarget.style.color = '#f8f5f0';

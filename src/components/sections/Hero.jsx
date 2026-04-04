@@ -132,8 +132,6 @@ const Hero = () => {
             CHIRON
           </motion.div>
         </div>
-
-        {/* Divider line with label */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: '100%' }}

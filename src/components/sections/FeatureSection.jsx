@@ -15,7 +15,7 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
         paddingRight: 'clamp(1.5rem, 5vw, 6rem)',
       }}
     >
-      {/* Large ghosted section number */}
+
       <div
         className="absolute pointer-events-none select-none"
         aria-hidden
@@ -34,8 +34,6 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
       >
         {isReversed ? '02' : '01'}
       </div>
-
-      {/* Top separator line */}
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"
         style={{
@@ -45,14 +43,13 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
       />
 
       <div
-        className={`max-w-7xl mx-auto relative z-10 flex flex-col gap-16 lg:gap-20 items-center ${
-          isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-        }`}
+        className={`max-w-7xl mx-auto relative z-10 flex flex-col gap-16 lg:gap-20 items-center ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
+          }`}
       >
-        {/* ── Text side ── */}
+
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <ScrollReveal direction={isReversed ? 'right' : 'left'}>
-            {/* Subtitle with flanking line */}
+
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
               <div style={{ width: '20px', height: '1px', background: '#B8962E', flexShrink: 0 }} />
               <span
@@ -63,7 +60,7 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
               </span>
             </div>
 
-            {/* Main heading */}
+
             <h2
               className="font-display font-black uppercase leading-none mb-8"
               style={{
@@ -75,15 +72,13 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
               {title}
             </h2>
 
-            {/* Description */}
+
             <p
               className="font-sans leading-relaxed mb-12 max-w-lg"
               style={{ fontSize: 'clamp(0.875rem, 1.1vw, 1rem)', color: '#555', letterSpacing: '0.01em', lineHeight: 1.85 }}
             >
               {description}
             </p>
-
-            {/* Stats grid */}
             <div
               className="grid grid-cols-2 gap-8 pt-8"
               style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}
@@ -108,11 +103,11 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
           </ScrollReveal>
         </div>
 
-        {/* ── Image side ── */}
+
         <div className="w-full lg:w-1/2">
           <ScrollReveal direction={isReversed ? 'left' : 'right'} delay={0.15} scale={true}>
             <div className="relative" style={{ aspectRatio: '4/3' }}>
-              {/* Image container */}
+
               <div
                 className="relative w-full h-full overflow-hidden"
                 style={{ borderRadius: '1px', boxShadow: '0 30px 90px rgba(0,0,0,0.14), 0 6px 20px rgba(0,0,0,0.08)' }}
@@ -124,17 +119,10 @@ const FeatureSection = ({ title, subtitle, description, stats, imageSrc, isRever
                   loading="lazy"
                   style={{ filter: 'brightness(0.97) contrast(1.07) saturate(1.04)' }}
                 />
-
-                {/* Top-left HUD bracket */}
                 <div className="absolute top-3 left-3 pointer-events-none" style={{ width: '20px', height: '20px', borderTop: '1px solid rgba(184,150,46,0.7)', borderLeft: '1px solid rgba(184,150,46,0.7)' }} />
-                {/* Bottom-right HUD bracket */}
                 <div className="absolute bottom-3 right-3 pointer-events-none" style={{ width: '20px', height: '20px', borderBottom: '1px solid rgba(184,150,46,0.7)', borderRight: '1px solid rgba(184,150,46,0.7)' }} />
-
-                {/* Gold bottom bar */}
                 <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ height: '2px', background: 'linear-gradient(to right, transparent, rgba(184,150,46,0.6) 30%, rgba(184,150,46,0.6) 70%, transparent)' }} />
               </div>
-
-              {/* Floating label badge */}
               <div
                 className="absolute pointer-events-none"
                 style={{
