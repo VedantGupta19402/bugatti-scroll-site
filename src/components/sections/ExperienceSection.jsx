@@ -32,14 +32,10 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
           CHIRON
         </span>
       </div>
-
-      {/* Top gold accent */}
       <div
         className="absolute top-0 left-1/2 pointer-events-none"
         style={{ transform: 'translateX(-50%)', width: '1px', height: '80px', background: 'linear-gradient(to bottom, transparent, #B8962E)' }}
       />
-
-      {/* Gold radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(200,163,85,0.12) 0%, transparent 70%)' }}
@@ -66,8 +62,6 @@ const ExperienceSection = ({ onConfigureClick, onExploreModelsClick }) => {
           >
             Beyond<br />Driving
           </h2>
-
-          {/* Subtext */}
           <p
             className="font-sans leading-relaxed mb-12 mx-auto"
             style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1.05rem)', color: '#555', maxWidth: '38rem', lineHeight: 1.9 }}

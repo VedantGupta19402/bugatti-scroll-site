@@ -7,19 +7,13 @@
   --color-light: #f1ece4;
   --color-surface: rgba(0, 0, 0, 0.04);
   --color-surface-hover: rgba(0, 0, 0, 0.07);
-
-  /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Orbitron', sans-serif;
   --font-sub: 'Rajdhani', sans-serif;
-
-  /* Colors */
   --color-gold: #B8962E;
   --color-gold-light: #D4AF5A;
   --color-ink: #0f0f0f;
   --color-muted: #6b6b6b;
-
-  /* Spacing Rhythm */
   --spacing-section: 120px;
   --spacing-section-lg: 160px;
 }
@@ -43,8 +37,6 @@ body {
   overflow-x: hidden;
   background-color: var(--color-cream);
 }
-
-/* Global Container System */
 .page-container {
   width: 100%;
   max-width: 1300px;
@@ -61,7 +53,6 @@ body {
   }
 }
 
-/* Section Spacing System */
 .section-padding {
   padding-top: var(--spacing-section);
   padding-bottom: var(--spacing-section);
@@ -83,7 +74,6 @@ body {
   }
 }
 
-/* Typography Classes */
 .font-display { font-family: var(--font-display); }
 .font-sub { font-family: var(--font-sub); }
 
@@ -91,7 +81,6 @@ body {
 .bg-gold { background-color: var(--color-gold); }
 .border-gold { border-color: var(--color-gold); }
 
-/* Glassmorphism Utilities (light) */
 .glass-panel {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
@@ -105,15 +94,12 @@ body {
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Text Gradient — dark on light */
 .text-gradient {
   background: linear-gradient(180deg, #0f0f0f 0%, rgba(15, 15, 15, 0.45) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-/* Scroll bar styling */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -125,7 +111,6 @@ body {
   border-radius: 3px;
 }
 
-/* Grain texture overlay for premium feel */
 .grain::before {
   content: '';
   position: fixed;

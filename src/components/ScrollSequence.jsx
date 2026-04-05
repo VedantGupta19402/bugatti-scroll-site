@@ -191,8 +191,6 @@ const ScrollSequence = () => {
             borderRadius: '100%',
           }}
         />
-
-        {/* Loader */}
         {!isReady && (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center"
@@ -217,7 +215,6 @@ const ScrollSequence = () => {
                 className="absolute inset-y-0 left-0 transition-all duration-150"
                 style={{ width: `${loadPct}%`, background: 'linear-gradient(to right, #B8962E, #D4AF5A)' }}
               />
-              {/* Glint on bar end */}
               <div
                 className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full"
                 style={{ left: `${loadPct}%`, background: '#D4AF5A', boxShadow: '0 0 6px 2px rgba(200,163,85,0.5)', transform: 'translate(-50%, -50%)' }}
@@ -264,7 +261,7 @@ const ScrollSequence = () => {
           <div style={{ marginTop: '16px', width: '48px', height: '2px', background: 'linear-gradient(to right, #B8962E, transparent)' }} />
         </motion.div>
 
-        {/* ─── PHASE 2 — Right aligned ─── */}
+  
         <motion.div
           className="absolute pointer-events-none text-right"
           style={{
@@ -295,8 +292,6 @@ const ScrollSequence = () => {
 
           <div style={{ marginTop: '16px', marginLeft: 'auto', width: '48px', height: '2px', background: 'linear-gradient(to left, #B8962E, transparent)' }} />
         </motion.div>
-
-        {/* ─── PHASE 3 — Center fullscreen ─── */}
         <motion.div
           className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
           style={{ zIndex: 40, opacity: ph3o }}

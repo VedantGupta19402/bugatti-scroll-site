@@ -14,7 +14,6 @@ const Hero = () => {
       className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #fdfaf6 0%, #f0ebe1 55%, #e4ddd0 100%)' }}
     >
-      {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -25,8 +24,6 @@ const Hero = () => {
           WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%)',
         }}
       />
-
-      {/* Gold radial glow at center */}
       <div
         className="absolute pointer-events-none"
         style={{
@@ -34,8 +31,6 @@ const Hero = () => {
           background: 'radial-gradient(ellipse 55% 45% at 50% 50%, rgba(200,163,85,0.12) 0%, transparent 70%)',
         }}
       />
-
-      {/* HUD corners */}
       {[
         { top: '2rem', left: '2rem', borderTop: '1px solid', borderLeft: '1px solid' },
         { top: '2rem', right: '2rem', borderTop: '1px solid', borderRight: '1px solid' },
@@ -157,8 +152,6 @@ const Hero = () => {
           Supersport · Limited Edition
         </motion.p>
       </motion.div>
-
-      {/* Bottom scroll prompt */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

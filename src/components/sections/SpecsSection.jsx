@@ -24,7 +24,6 @@ const SpecsSection = () => {
         borderBottom: '1px solid rgba(255,255,255,0.05)',
       }}
     >
-      {/* Ghost watermark heading */}
       <div
         className="absolute inset-0 flex items-center pointer-events-none select-none overflow-hidden"
         aria-hidden
@@ -44,14 +43,12 @@ const SpecsSection = () => {
         </span>
       </div>
 
-      {/* Gold radial */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 50% 60% at 85% 50%, rgba(184,150,46,0.07) 0%, transparent 65%)' }}
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section header */}
         <ScrollReveal direction="up">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1rem' }}>
             <div style={{ width: '28px', height: '1px', background: '#B8962E' }} />
@@ -71,7 +68,7 @@ const SpecsSection = () => {
           </h2>
         </ScrollReveal>
 
-        {/* Specs grid */}
+    
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
           {specs.map((spec, idx) => (
             <ScrollReveal key={idx} direction="up" delay={idx * 0.07}>
@@ -82,17 +79,17 @@ const SpecsSection = () => {
                   borderBottom: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                {/* Index number */}
+                
                 <div className="font-display" style={{ fontSize: '10px', letterSpacing: '0.4em', color: 'rgba(184,150,46,0.5)', marginBottom: '0.6rem' }}>
                   {String(idx + 1).padStart(2, '0')}
                 </div>
 
-                {/* Spec name */}
+          
                 <div className="font-sub font-semibold uppercase" style={{ fontSize: '10px', letterSpacing: '0.35em', color: '#666', marginBottom: '0.5rem', transition: 'color 0.25s' }}>
                   {spec.name}
                 </div>
 
-                {/* Main value */}
+                
                 <div
                   className="font-display font-bold group-hover:text-[#D4AF5A] transition-colors duration-300"
                   style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: '#f8f5f0', letterSpacing: '-0.01em', lineHeight: 1.1 }}
@@ -100,12 +97,12 @@ const SpecsSection = () => {
                   {spec.value}
                 </div>
 
-                {/* Sub label */}
+              
                 <div className="font-sub uppercase mt-1" style={{ fontSize: '9px', letterSpacing: '0.3em', color: '#4a4a4a' }}>
                   {spec.sub}
                 </div>
 
-                {/* Hover gold left bar */}
+            
                 <div
                   className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-0.5 transition-all duration-300"
                   style={{ background: '#B8962E' }}

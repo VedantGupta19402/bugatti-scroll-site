@@ -35,7 +35,6 @@ const Navbar = ({ onLogoClick, onNavigate, onConfigureClick }) => {
         boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.06)' : 'none',
       }}
     >
-      {/* Logo */}
       <div
         className="font-display text-xl tracking-[0.2em] font-bold uppercase cursor-pointer select-none"
         style={{ color: '#0f0f0f' }}
@@ -46,8 +45,6 @@ const Navbar = ({ onLogoClick, onNavigate, onConfigureClick }) => {
       >
         Bugatti
       </div>
-
-      {/* Links */}
       <div
         className="hidden md:flex gap-8 font-sub text-xs tracking-widest uppercase font-semibold"
         style={{ color: '#3a3a3a' }}
@@ -71,8 +68,6 @@ const Navbar = ({ onLogoClick, onNavigate, onConfigureClick }) => {
           </a>
         ))}
       </div>
-
-      {/* CTA */}
       <button
         className="text-xs uppercase tracking-widest px-6 py-2 transition-all duration-300 font-sub font-semibold"
         style={{
